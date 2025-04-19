@@ -1,0 +1,148 @@
+
+local Keyboardd = Instance.new("ScreenGui")
+local S = Instance.new("TextLabel")
+local A = Instance.new("TextLabel")
+local W = Instance.new("TextLabel")
+local D = Instance.new("TextLabel")
+local SPACE = Instance.new("TextLabel")
+local uis = game:GetService("UserInputService")
+
+-- Properties
+
+Keyboardd.Name = "Keyboardd"
+Keyboardd.Parent = game:GetService("CoreGui")
+
+S.Name = "S"
+S.Parent = Keyboardd
+S.BackgroundColor3 = Color3.new(0, 0, 0)
+S.BackgroundTransparency = 0.5
+S.BorderColor3 = Color3.new(0, 0, 0)
+S.BorderSizePixel = 0
+S.Position = UDim2.new(0.493670404, 0, 0.815326631, 0)
+S.Size = UDim2.new(0, 39, 0, 39)
+S.Font = Enum.Font.SourceSansBold
+S.Text = "S"
+S.TextColor3 = Color3.new(1, 1, 1)
+S.TextSize = 40
+
+A.Name = "A"
+A.Parent = Keyboardd
+A.BackgroundColor3 = Color3.new(0, 0, 0)
+A.BackgroundTransparency = 0.5
+A.BorderColor3 = Color3.new(0, 0, 0)
+A.BorderSizePixel = 0
+A.Position = UDim2.new(0.473331073, 0, 0.815326631, 0)
+A.Size = UDim2.new(0, 39, 0, 39)
+A.Font = Enum.Font.SourceSansBold
+A.Text = "A"
+A.TextColor3 = Color3.new(1, 1, 1)
+A.TextSize = 40
+
+W.Name = "W"
+W.Parent = Keyboardd
+W.BackgroundColor3 = Color3.new(0, 0, 0)
+W.BackgroundTransparency = 0.5
+W.BorderColor3 = Color3.new(0, 0, 0)
+W.BorderSizePixel = 0
+W.Position = UDim2.new(0.493670374, 0, 0.774331673, 0)
+W.Size = UDim2.new(0, 39, 0, 39)
+W.Font = Enum.Font.SourceSansBold
+W.Text = "W"
+W.TextColor3 = Color3.new(1, 1, 1)
+W.TextSize = 40
+
+D.Name = "D"
+D.Parent = Keyboardd
+D.BackgroundColor3 = Color3.new(0, 0, 0)
+D.BackgroundTransparency = 0.5
+D.BorderColor3 = Color3.new(0, 0, 0)
+D.BorderSizePixel = 0
+D.Position = UDim2.new(0.514009735, 0, 0.815326631, 0)
+D.Size = UDim2.new(0, 39, 0, 39)
+D.Font = Enum.Font.SourceSansBold
+D.Text = "D"
+D.TextColor3 = Color3.new(1, 1, 1)
+D.TextSize = 40
+D.TextWrapped = true
+
+SPACE.Name = "SPACE"
+SPACE.Parent = Keyboardd
+SPACE.Active = true
+SPACE.BackgroundColor3 = Color3.new(0, 0, 0)
+SPACE.BackgroundTransparency = 0.5
+SPACE.BorderColor3 = Color3.new(0, 0, 0)
+SPACE.BorderSizePixel = 0
+SPACE.Position = UDim2.new(0.473379314, 0, 0.856321573, 0)
+SPACE.Size = UDim2.new(0, 117, 0, 35)
+SPACE.Font = Enum.Font.SourceSansBold
+SPACE.Text = "SPACE"
+SPACE.TextColor3 = Color3.new(1, 1, 1)
+SPACE.TextSize = 40
+
+uis.InputBegan:Connect(function (input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.W then
+        W.BackgroundTransparency = 0
+    end
+end)
+
+uis.InputEnded:Connect(function (input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.W then
+        W.BackgroundTransparency = 0.5
+    end
+end)
+
+--
+
+uis.InputBegan:Connect(function (input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.S then
+        S.BackgroundTransparency = 0
+    end
+end)
+
+uis.InputEnded:Connect(function (input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.S then
+        S.BackgroundTransparency = 0.5
+    end
+end)
+
+--
+
+uis.InputBegan:Connect(function (input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.D then
+        D.BackgroundTransparency = 0
+    end
+end)
+
+uis.InputEnded:Connect(function (input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.D then
+        D.BackgroundTransparency = 0.5
+    end
+end)
+
+--
+
+uis.InputBegan:Connect(function (input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.A then
+        A.BackgroundTransparency = 0
+    end
+end)
+
+uis.InputEnded:Connect(function (input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.A then
+        A.BackgroundTransparency = 0.5
+    end
+end)
+
+--
+
+uis.InputBegan:Connect(function (input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.Space then
+        SPACE.BackgroundTransparency = 0
+    end
+end)
+
+uis.InputEnded:Connect(function (input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.Space then
+        SPACE.BackgroundTransparency = 0.5
+    end
+end)
